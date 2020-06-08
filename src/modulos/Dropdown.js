@@ -7,7 +7,7 @@ import ERR from './Errores'
     const margin = 10
     const MODULO = "Error BodyStyle dice: M08"
 
-    var configurarDropDown = ({color = "#fff"}) => {
+    var configurarDropDown = ({color = "#fff"} = {}) => {
         
         if( !(ERR.hexadecimal.validacion.test(color)) ){
             console.error(MODULO + ERR.hexadecimal.mensaje)
