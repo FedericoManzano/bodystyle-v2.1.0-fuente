@@ -41,6 +41,24 @@ $p: inicializarVariable();
     $p: incrementar($p);
 }
 
+$p: inicializarVariable();
+@for $i from 0 through 15 {
+    .py-#{$i} { 
+        padding-top: #{$p}em !important;
+        padding-bottom: #{$p}em !important;
+    }
+    $p: incrementar($p);
+}
+
+$p: inicializarVariable();
+@for $i from 0 through 15 {
+    .px-#{$i} { 
+        padding-left: #{$p}em !important;
+        padding-right: #{$p}em !important;
+    }
+    $p: incrementar($p);
+}
+
 $m: inicializarVariable();
 @for $i from 0 through 15 {
     .m-#{$i} { 
@@ -77,6 +95,24 @@ $m: inicializarVariable();
 @for $i from 0 through 15 {
     .mab-#{$i} { 
         margin-bottom: #{$m}em !important;
+    }
+    $m: incrementar($m);
+}
+
+$m: inicializarVariable();
+@for $i from 0 through 15 {
+    .my-#{$i} { 
+        margin-bottom: #{$m}em !important;
+        margin-top: #{$m}em !important;
+    }
+    $m: incrementar($m);
+}
+
+$m: inicializarVariable();
+@for $i from 0 through 15 {
+    .mx-#{$i} { 
+        margin-left: #{$m}em !important;
+        margin-right: #{$m}em !important;
     }
     $m: incrementar($m);
 }
@@ -123,6 +159,24 @@ $m: inicializarVariable();
         $m: incrementar($m);
     }
 
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .my-m-#{$i} { 
+            margin-top: #{$m}em !important;
+            margin-bottom: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mx-m-#{$i} { 
+            margin-left: #{$m}em !important;
+            margin-right: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+
     $p: inicializarVariable();
     @for $i from 0 through 15 {
         .p-m-#{$i} { 
@@ -158,6 +212,15 @@ $m: inicializarVariable();
     @for $i from 0 through 15 {
         .par-m-#{$i} { 
             padding-top: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .py-m-#{$i} { 
+            padding-top: #{$p}em !important;
+            padding-bottom: #{$p}em !important;
         }
         $p: incrementar($p);
     }
@@ -201,6 +264,23 @@ $m: inicializarVariable();
         $m: incrementar($m);
     }
 
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .my-s-#{$i} { 
+            margin-top: #{$m}em !important;
+            margin-bottom: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mx-s-#{$i} { 
+            margin-left: #{$m}em !important;
+            margin-right: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
 
     $p: inicializarVariable();
     @for $i from 0 through 15 {
@@ -237,6 +317,24 @@ $m: inicializarVariable();
     @for $i from 0 through 15 {
         .par-s-#{$i} { 
             padding-top: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .py-s-#{$i} { 
+            padding-top: #{$p}em !important;
+            padding-bottom: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .px-s-#{$i} { 
+            padding-left: #{$p}em !important;
+            padding-right: #{$p}em !important;
         }
         $p: incrementar($p);
     }
@@ -279,7 +377,23 @@ $m: inicializarVariable();
         }
         $m: incrementar($m);
     }
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .my-xs-#{$i} { 
+            margin-top: #{$m}em !important;
+            margin-bottom: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
 
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mx-xs-#{$i} { 
+            margin-left: #{$m}em !important;
+            margin-right: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
 
     $p: inicializarVariable();
     @for $i from 0 through 15 {
@@ -316,6 +430,24 @@ $m: inicializarVariable();
     @for $i from 0 through 15 {
         .par-xs-#{$i} { 
             padding-top: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .py-xs-#{$i} { 
+            padding-top: #{$p}em !important;
+            padding-bottom: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .px-xs-#{$i} { 
+            padding-left: #{$p}em !important;
+            padding-right: #{$p}em !important;
         }
         $p: incrementar($p);
     }
