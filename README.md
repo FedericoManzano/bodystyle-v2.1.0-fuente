@@ -23,7 +23,7 @@ La forma de utilizar estos enlaces es agregandolos dentro de la etiqueta `<head>
 ### bodystyle.min.js
 [https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v2.1.0-fuente/master/dist/js/bodystyle.min.js](https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v2.1.0-fuente/master/dist/js/bodystyle.min.js)
 
-
+#### Cabecera
 ```html
 <!DOCTYPE html>
 <head>
@@ -38,6 +38,8 @@ La forma de utilizar estos enlaces es agregandolos dentro de la etiqueta `<head>
 
 <!-- Resto de la página -->
 ```
+
+#### Pie
 ```html
 <script src="https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v2.1.0-fuente/master/dist/js/bodystyle.min.js"></script>
 </body>
@@ -49,6 +51,7 @@ Dejamos una plantilla para copiar y pegar para poder cargar la librería con lo 
 
 ```html
 <!DOCTYPE html>
+<html>
     <head>
         <!-- META obligatorio para poder utilizar la libreria -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,15 +82,33 @@ de Node.
 [bodystyle-v2.1.0-fuente-master.zip](https://github.com/FedericoManzano/bodystyle-v2.1.0-fuente/archive/master.zip)
 
 ### Node package
+Ingresar por el terminal los siguientes comandos para instalar la dependencia de la librería.
 
 #### NPM 
-
 ```
 npm i bodystyle
 ```
 
 #### Yarn 
-
 ```
 yarn add bodystyle
 ```
+
+## Dependencias
+
+### Producción 
+- [jquery](https://jquery.com/)
+
+### Desarrollo 
+- [babeljs](https://babeljs.io/)
+- [webpack](https://webpack.js.org/) v4.43.0
+
+## Licencia
+
+MIT 
+
+bodystyle (c) 2020
+
+
+
+
