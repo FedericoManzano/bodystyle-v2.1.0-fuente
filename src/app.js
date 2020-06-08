@@ -1,10 +1,10 @@
 
 
 /*!
- * BodyStyle v2.0.0
+ * BodyStyle v2.1.0
  * Copyright Federico Manzano
  * Licencia MIT
- * Repositorio (https://github.com/FedericoManzano/bodystyle-fuente-v2.0.0)
+ * Repositorio (https://github.com/FedericoManzano/bodystyle-v2.1.0-fuente)
  */
 import "jquery"
 import MenuResp from "./modulos/MenuSuperior"
@@ -120,7 +120,7 @@ import Nav from "./modulos/Nav"
         ScrollSpyInit({})
         BotonFlotanteInit({})
         ImagenesInit()
-        //SliderInit({})
+        SliderInit({})
         ParalaxInit()
         ToolTipsInit()
     }

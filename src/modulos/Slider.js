@@ -55,11 +55,11 @@ import ERR from "./Errores"
                 $(".selectores-contenedor").append(selectores[i])
             }
             elementos[i] = $(".slider li:nth-child(" + (i + 1) + ")")
-            elementos[i].hide()
+            $(elementos[i]).hide()
         }
-        elementos[0].show()
+        $($(elementos[0])).show()
         if(config.select === true){
-            selectores[0].css("background-color", "orangered")
+            $(selectores[0]).css("background-color", "orangered")
         }
         if(config.automatico){
             arrancarCronometro()

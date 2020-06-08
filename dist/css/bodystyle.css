@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*!
- * BodyStyle v2.0.0
+ * BodyStyle v2.1.0
  * Copyright Federico Manzano
  * Licencia MIT
- * Repositorio (https://github.com/FedericoManzano/bodystyle-fuente-v2.0.0)
+ * Repositorio (https://github.com/FedericoManzano/bodystyle-v2.1.0-fuente)
  */
 * {
   padding: 0;
@@ -19799,6 +19799,142 @@ input.btn-cubrir-lg-o {
   top: 10px;
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  background-color: #111111;
+  z-index: 100000;
+  --deprecated: "WARNING: Use .other-class instead";
+}
+.menu .menu-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: auto;
+  color: white;
+  --deprecated: "WARNING: Use .other-class instead";
+}
+.menu .lateral-boton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-end;
+  padding: 1em;
+  cursor: pointer;
+  width: 80%;
+  color: white;
+  z-index: 100000000;
+  --deprecated: "WARNING: Use .other-class instead";
+}
+.menu .lateral-boton span {
+  width: 22px;
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: white;
+}
+@media (min-width: 1030px) {
+  .menu .lateral-boton {
+    display: none !important;
+  }
+}
+.menu .lista {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  --deprecated: "WARNING: Use .other-class instead";
+}
+.menu .lista li a {
+  display: block;
+  padding: 1em;
+  height: 100%;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+.menu .lista li a.desactivado {
+  color: #757575;
+}
+.menu .lista li a.desactivado:hover {
+  color: grey;
+}
+.menu .lista li a:hover {
+  color: #ececec;
+}
+.menu .borde-seleccionado {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #006cff;
+  --deprecated: "WARNING: Use .other-class instead";
+}
+.menu .contenedor {
+  display: flex;
+  --deprecated: "WARNING: Use .other-class instead";
+}
+
+.menu-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  --deprecated: "WARNING: Clase obsoleta";
+}
+
+.menu-ext {
+  background-color: white;
+  display: block;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.212);
+  --deprecated: "WARNING: Use .other-class instead";
+}
+.menu-ext ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.menu-ext ul li {
+  min-width: 100px;
+}
+.menu-ext ul li a {
+  display: flex;
+  flex-direction: column;
+  color: #4e4e4e;
+  text-align: center;
+  padding: 10px 0;
+}
+.menu-ext ul li a:hover {
+  color: black;
+}
+.menu-ext ul li a span:first-child {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+.menu-ext ul li a span:last-child {
+  font-size: 1em;
+}
+
+.colapso {
+  display: none;
+  opacity: 0;
+  --deprecated: "WARNING: Use .other-class instead";
+}
+
+.selector-colapso {
+  position: relative;
+  overflow: hidden;
+  --deprecated: "WARNING: Use .other-class instead";
+}
+
+/*************************************************************************************************
+*************************/
 .nav-body {
   background-color: #1a58df;
   display: flex;
@@ -19849,6 +19985,26 @@ input.btn-cubrir-lg-o {
   }
 }
 .nav-body .boton-nav:hover {
+  background-color: rgba(255, 255, 255, 0.199);
+}
+.nav-body .boton-desplegable {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100000000;
+  align-items: flex-end;
+  margin: 0 0.5em;
+}
+.nav-body .boton-desplegable span {
+  width: 24px;
+  height: 2.5px;
+  background-color: white;
+  margin-bottom: 4.5px;
+  z-index: -1;
+}
+.nav-body .boton-desplegable:hover {
   background-color: rgba(255, 255, 255, 0.199);
 }
 .nav-body .lista {
@@ -19916,7 +20072,7 @@ input.btn-cubrir-lg-o {
   color: grey !important;
 }
 
-.nav-lista {
+.nav-sidebar {
   position: fixed;
   background-color: white;
   box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.253);
@@ -19927,18 +20083,78 @@ input.btn-cubrir-lg-o {
   transition: left 0.3s;
   z-index: 10000000;
 }
-.nav-lista ul li a {
+.nav-sidebar ul li a {
   display: block;
   color: black;
   width: 100%;
   padding: 10px;
   font-size: 18px;
 }
-.nav-lista ul li a.activo {
+.nav-sidebar ul li a.activo {
   color: orangered;
 }
-.nav-lista ul li a.desactivado {
+.nav-sidebar ul li a.desactivado {
   color: grey !important;
+}
+
+.nav-sidebar-desplegable {
+  padding-top: 0.5em;
+  position: fixed;
+  bottom: 0;
+  top: 4em;
+  left: -240px;
+  background-color: white;
+  box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.253);
+  width: 240px;
+  z-index: 10000000;
+  overflow: auto;
+  user-select: none;
+  transition: left 0.3s;
+}
+.nav-sidebar-desplegable .titulo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: black;
+  padding: 0.3em 0.5em;
+  cursor: pointer;
+}
+.nav-sidebar-desplegable .f-derecha {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 5px solid #2c2c2c;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+.nav-sidebar-desplegable .f-abajo {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 5px solid #2c2c2c;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.nav-sidebar-desplegable ul li a {
+  display: block;
+  padding: 0.2em 1em;
+  width: 100%;
+  color: #2c2c2c;
+  font-size: 18px;
+}
+.nav-sidebar-desplegable ul li a:hover {
+  color: black;
+}
+.nav-sidebar-desplegable ul li a.activo {
+  color: orangered;
+}
+.nav-sidebar-desplegable ul li a.desactivado {
+  color: grey !important;
+}
+
+.nav-contenido {
+  transition: all 0.3s;
 }
 
 .nav-complemento {
