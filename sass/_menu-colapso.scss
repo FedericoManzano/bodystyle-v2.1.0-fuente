@@ -1,0 +1,50 @@
+.menu-colapso {
+    height: 3em;
+    display: flex;
+    align-items: center;
+    background-color: $fd-azul-ve;
+    padding: 1em;
+    .menu-boton {
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+        span {
+            @include ancho-alto(18px, 2px);
+            margin-bottom: 3px;
+            background-color: white;
+        }
+    }
+}
+
+
+.menu-colapso-contenedor {
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+    background-color: $fd-gris-az;
+    opacity: 0;
+    span {
+        font-size: 1.4em;
+        font-weight: 600;
+    }
+    ul {
+        li {
+            a{
+                display: block;
+                color: $fd-blanco;
+                padding: 8px 10px;
+                font-size: 1.1em;
+             
+                &:hover {
+                    color: $fd-azul-c;
+                }
+                &.desactivado {
+                    color: rgb(175, 175, 175) !important;
+                    &:hover{
+                        background-color: transparent !important;
+                    }
+                }
+            }
+        }
+    }
+}
