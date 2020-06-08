@@ -19962,8 +19962,8 @@ input.btn-cubrir-lg-o {
     justify-content: space-between;
   }
 }
-.nav-body .boton-nav {
-  display: none;
+.nav-body .boton-nav,
+.nav-body .boton-desplegable {
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
@@ -19971,32 +19971,7 @@ input.btn-cubrir-lg-o {
   align-items: flex-end;
   margin-right: 1em;
 }
-.nav-body .boton-nav span {
-  width: 24px;
-  height: 2.5px;
-  background-color: white;
-  margin-bottom: 4.5px;
-  z-index: -1;
-}
-@media (max-width: 1024px) {
-  .nav-body .boton-nav {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.nav-body .boton-nav:hover {
-  background-color: rgba(255, 255, 255, 0.199);
-}
-.nav-body .boton-desplegable {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 100000000;
-  align-items: flex-end;
-  margin: 0 0.5em;
-}
+.nav-body .boton-nav span,
 .nav-body .boton-desplegable span {
   width: 24px;
   height: 2.5px;
@@ -20004,8 +19979,23 @@ input.btn-cubrir-lg-o {
   margin-bottom: 4.5px;
   z-index: -1;
 }
+.nav-body .boton-nav:hover,
 .nav-body .boton-desplegable:hover {
   background-color: rgba(255, 255, 255, 0.199);
+}
+.nav-body .boton-nav {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .nav-body .boton-nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.nav-body .boton-desplegable {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
 }
 .nav-body .lista {
   display: flex;
@@ -20166,216 +20156,6 @@ input.btn-cubrir-lg-o {
   right: 0;
   bottom: 0;
   height: 100vh;
-}
-
-.menu-colapso {
-  height: 3em;
-  display: flex;
-  align-items: center;
-  background-color: #06263f;
-  padding: 1em;
-}
-.menu-colapso .menu-boton {
-  display: flex;
-  flex-direction: column;
-  color: white;
-}
-.menu-colapso .menu-boton span {
-  width: 18px;
-  height: 2px;
-  margin-bottom: 3px;
-  background-color: white;
-}
-
-.menu-colapso-contenedor {
-  padding: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.164);
-  background-color: #1e2029;
-  opacity: 0;
-}
-.menu-colapso-contenedor span {
-  font-size: 1.4em;
-  font-weight: 600;
-}
-.menu-colapso-contenedor ul li a {
-  display: block;
-  color: white;
-  padding: 8px 10px;
-  font-size: 1.1em;
-}
-.menu-colapso-contenedor ul li a:hover {
-  color: #006cff;
-}
-.menu-colapso-contenedor ul li a.desactivado {
-  color: #afafaf !important;
-}
-.menu-colapso-contenedor ul li a.desactivado:hover {
-  background-color: transparent !important;
-}
-
-.menu-lateral {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: -240px;
-  background-color: #111111;
-  width: 240px;
-  z-index: 10000;
-  user-select: none;
-}
-.menu-lateral ul li a {
-  display: block;
-  padding: 13px;
-  color: white;
-  font-size: 1.2em;
-}
-.menu-lateral ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.445);
-}
-.menu-lateral ul li a.desactivado {
-  color: #afafaf !important;
-}
-.menu-lateral ul li a.desactivado:hover {
-  background-color: transparent !important;
-}
-
-.complemento {
-  position: absolute;
-  z-index: 3;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-}
-
-.sidebar-barra {
-  width: 100%;
-  min-height: 3em;
-  max-height: 3.5em;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  background-color: #06263f;
-  transition: all 0.5s ease;
-  z-index: 100000;
-}
-.sidebar-barra .sidebar-menu {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  color: white;
-}
-.sidebar-barra .sidebar-menu span {
-  width: 18px;
-  height: 2px;
-  margin-bottom: 3px;
-  background-color: white;
-}
-
-.sidebar-lateral {
-  position: fixed;
-  top: 0em;
-  bottom: 0;
-  left: -240px;
-  width: 240px;
-  background-color: #15161a;
-  transition: all 0.5s ease;
-  z-index: 100000;
-  overflow: auto;
-}
-.sidebar-lateral .titulo {
-  color: white;
-  display: block;
-  padding: 10px;
-  border-bottom: 1px solid black;
-  position: relative;
-}
-.sidebar-lateral .lista {
-  background-color: #1e2029;
-}
-.sidebar-lateral .lista li a {
-  display: block;
-  padding: 10px 15px;
-  color: white;
-  font-size: 0.8em;
-}
-.sidebar-lateral .lista li a:hover {
-  background-color: rgba(0, 0, 0, 0.418);
-}
-.sidebar-lateral .logo {
-  padding: 0.5em 2em;
-  color: white;
-  background-color: #06263f;
-  font-size: 22px;
-}
-
-.sidebarFija {
-  position: fixed;
-  top: 0;
-  right: 500;
-  bottom: 0;
-  left: 0;
-  width: 300px;
-  background-color: #111111;
-  overflow: auto;
-  padding-bottom: 40px;
-  user-select: none;
-  border-right: 1px solid rgba(0, 0, 0, 0.185);
-  letter-spacing: 1px;
-}
-.sidebarFija .sedebarLogo {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.185);
-  color: white;
-  background-color: rgba(0, 0, 0, 0.103);
-  margin-bottom: 20px;
-  height: 3.5em;
-  padding-left: 10px;
-}
-.sidebarFija .sedebarLogo a {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: white;
-  font-weight: 600;
-}
-.sidebarFija .sedebarLogo span {
-  font-size: 13px;
-  color: #ececec;
-}
-.sidebarFija .titulo {
-  display: block;
-  color: white;
-  padding: 7px 15px;
-  font-size: 1em;
-  position: relative;
-  cursor: pointer;
-  font-weight: 600;
-}
-.sidebarFija .lista li a {
-  display: block;
-  color: #ececec;
-  padding: 5px 30px;
-  font-size: 0.9em;
-}
-.sidebarFija .lista li a:hover {
-  color: gray;
-}
-.sidebarFija .pie {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.151);
-  font-size: 13px;
-  width: 100%;
-  padding: 5px;
-  border-top: 1px solid rgba(0, 0, 0, 0.301);
 }
 
 .slider-show {

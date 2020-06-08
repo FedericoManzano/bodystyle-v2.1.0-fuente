@@ -7,16 +7,11 @@
  * Repositorio (https://github.com/FedericoManzano/bodystyle-v2.1.0-fuente)
  */
 import "jquery"
-import MenuResp from "./modulos/MenuSuperior"
 import Modal from "./modulos/Modal"
 import Waves from  "./modulos/Waves"
 import DropDown from "./modulos/Dropdown"
 import BotonFlotante from "./modulos/BotonFlotante"
 import Toast from "./modulos/Toast"
-import SidebarBarra from "./modulos/Sidebar-barra"
-import SidebarLateral from "./modulos/Sidebar-lateral"
-import SidebarFija from "./modulos/SidebarFija"
-import MenuColapso from "./modulos/Menu-colapso"
 import ScrollSpy from "./modulos/ScrollSpy"
 import ToolTips from "./modulos/ToolTips"
 import Imagenes from "./modulos/Imagenes"
@@ -42,37 +37,26 @@ import Nav from "./modulos/Nav"
 
 (function(window){
     Waves.iniciar()
-    MenuColapso.iniciar()
     Range.iniciar()
     Alerta.iniciar()
     Template.iniciar()
     GruposInput.iniciar()
     Desactivado.iniciar();
     InputHandler.iniciar()
-    Nav.iniciar()
+    
+
+    const NavInit = () => {
+        Nav.iniciar()
+    }
+
 
     var ContenedoresInit = () => Contenedores.iniciar()
-
-
-    var MenuSuperior = (config)=> MenuResp.iniciar(config)
 
     var ColeccionInit = () => {
         return new Coleccion
     } 
 
-    var SidebarFijaInit = (c) => SidebarFija.iniciar(c)
-
-
-    var DesplegarSidebarFija = ()=> {
-        return SidebarFija
-    }
-    
     var ParalaxInit = () => Paralax.iniciar()
-    
-    var SidebarInit = () => {
-        SidebarBarra.iniciar()
-        SidebarLateral.iniciar()
-    }
 
 
     var BotonFlotanteInit = (config) => {
@@ -113,8 +97,6 @@ import Nav from "./modulos/Nav"
     }
 
     var AutoInit = ()=> {
-        MenuSuperior()
-        SidebarInit() // Sidebar Movil
         ModalInit()
         DropDownInit({})
         ScrollSpyInit({})
@@ -123,6 +105,7 @@ import Nav from "./modulos/Nav"
         SliderInit({})
         ParalaxInit()
         ToolTipsInit()
+        NavInit()
     }
 
 
@@ -156,13 +139,10 @@ import Nav from "./modulos/Nav"
 
 
    var BS = {
-        MenuSuperior: (config) => MenuSuperior(config),
         ModalInit: (config) => ModalInit(config),
         DropDownInit: (config) => DropDownInit(config),
-        SidebarFijaInit: (c = {})=> SidebarFijaInit(c) , //Sidebar fija
         AutoInit: () => AutoInit(),
         Toast: (html, clases, tiempo) => Toast.ejecutar(html, clases, tiempo),
-        SidebarInit: () => SidebarInit(), /// Sidebar movil
         ScrollSpyInit: (config) => ScrollSpyInit(config),
         BotonFlotanteInit: (config)=> BotonFlotanteInit(config),
         ImagenesInit: () => ImagenesInit(),
@@ -178,7 +158,8 @@ import Nav from "./modulos/Nav"
         ColeccionFlotanteInit: () => ColeccionFlotanteInit(),
         EfectoHoverBordeInit: () => EfectoHoverBordeInit(),
         SelectInit: () => SelectInit(),
-        ContenedoresInit: () => ContenedoresInit()
+        ContenedoresInit: () => ContenedoresInit(),
+        NavInit: () => NavInit()
     }
     
     window.BS = BS
