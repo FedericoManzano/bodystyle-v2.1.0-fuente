@@ -23,35 +23,35 @@
 }
 
 @media (min-width: 400px) {
-  .mostar-solo-x-chicos {
+  .mostrar-solo-x-chicos {
     display: none !important;
   }
 }
 
 @media (min-width: 770px) {
-  .mostar-solo-chicos {
+  .mostrar-solo-chicos {
     display: none !important;
   }
 }
 @media (max-width: 400px) {
-  .mostar-solo-chicos {
+  .mostrar-solo-chicos {
     display: none !important;
   }
 }
 
 @media (min-width: 1030px) {
-  .mostar-solo-medianos {
+  .mostrar-solo-medianos {
     display: none !important;
   }
 }
 @media (max-width: 770px) {
-  .mostar-solo-medianos {
+  .mostrar-solo-medianos {
     display: none !important;
   }
 }
 
 @media (max-width: 1030px) {
-  .mostar-solo-grandes {
+  .mostrar-solo-grandes {
     display: none !important;
   }
 }

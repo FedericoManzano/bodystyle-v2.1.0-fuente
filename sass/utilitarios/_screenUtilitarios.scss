@@ -24,13 +24,13 @@
 }
 
 
-.mostar-solo-x-chicos {
+.mostrar-solo-x-chicos {
     @include agregar-a-medida-minima(xs){
         display: none !important;
     }
 }
 
-.mostar-solo-chicos {
+.mostrar-solo-chicos {
     @include agregar-a-medida-minima(s){
         display: none !important;
     }
@@ -41,7 +41,7 @@
 }
 
 
-.mostar-solo-medianos {
+.mostrar-solo-medianos {
     @include agregar-a-medida-minima(m){
         display: none !important;
     }
@@ -51,7 +51,7 @@
     }
 }
 
-.mostar-solo-grandes {
+.mostrar-solo-grandes {
     @include agregar-a-medida-maxima(m){
         display: none !important;
     }
