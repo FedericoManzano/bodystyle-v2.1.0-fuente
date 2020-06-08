@@ -80,7 +80,7 @@ class Tab {
         this.cambiarSolapa(contexto)
     }
 
-    iniciarBorde({contexto = "vacio", colorFuente = "c-negro", colorFondo = "fd-blanco", colorBorde = "fd-negro"}){
+    iniciarBorde({contexto = "vacio", colorFuente = "c-negro", colorFondo = "fd-blanco", colorBorde = "fd-negro"} = {}){
 
 
         const MODULO = "Error BodyStyle dice: M28"

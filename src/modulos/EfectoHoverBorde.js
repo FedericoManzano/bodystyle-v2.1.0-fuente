@@ -29,7 +29,7 @@ class EfectoHoverBorde {
     }
 
     iniciar(
-        {contexto = "vacio", posicion="izquierda",color= "fd-rojo"}
+        {contexto = "vacio", posicion="izquierda",color= "fd-rojo"} = {}
     ){
 
         if(!this.validarConfig(contexto, posicion, color))

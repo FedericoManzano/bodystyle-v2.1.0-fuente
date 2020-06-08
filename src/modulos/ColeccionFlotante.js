@@ -76,7 +76,7 @@ class ColeccionFlotante {
     }
 
 
-    iniciar({contexto="vacio", fondoItem="fd-gris-az-o", colorTexto="c-blanco", altura = 100}) {
+    iniciar({contexto="vacio", fondoItem="fd-gris-az-o", colorTexto="c-blanco", altura = 100} = {}) {
 
         var c = {
             contexto,

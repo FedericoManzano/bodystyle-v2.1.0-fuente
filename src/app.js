@@ -23,7 +23,6 @@ import Alerta from "./modulos/Alerta"
 import Template from "./modulos/Template"
 import Tab from "./modulos/Tabs"
 import GruposInput from "./modulos/GruposInput"
-import EfectoScroll from "./modulos/EfectoScroll"
 import Desactivado from "./modulos/Desactivado"
 import Coleccion from "./modulos/Colecciones"
 import ColeccionFlotante from "./modulos/ColeccionFlotante"
@@ -82,10 +81,6 @@ import Nav from "./modulos/Nav"
 
     var TabInit = () => {
         return new Tab
-    }
-
-    var EfectoScrollInit = () => {
-        return new EfectoScroll
     }
 
     var ColeccionFlotanteInit = () => {
@@ -152,7 +147,6 @@ import Nav from "./modulos/Nav"
         BotonInicioInit: () => BotonInicioInit(),
         TabInit: () => TabInit(),
         ToolTipsInit: () =>  ToolTipsInit(),
-        EfectoScrollInit: () => EfectoScrollInit(),
         DesplegarSidebarFija: () => DesplegarSidebarFija(),
         ColeccionInit: () => ColeccionInit(),
         ColeccionFlotanteInit: () => ColeccionFlotanteInit(),

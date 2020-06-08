@@ -71,7 +71,7 @@ import ERR from "./Errores"
         separacion = 120, 
         colorSeleccionado = "#000", 
         colorNoSeleccionado = "#666"
-    }) => {
+    } = {}) => {
 
 
     const MODULO = "Error BodyStyle dice: M21" 

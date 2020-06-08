@@ -22,7 +22,7 @@ import ERR from "./Errores"
     }
 
 
-    var iniciar =  ({colorMenu = "fd-rojo", alineacion = "vertical", altura = 200}) => 
+    var iniciar =  ({colorMenu = "fd-rojo", alineacion = "vertical", altura = 200} = {}) => 
     {
 
         if(!validarBoton( colorMenu,alineacion, altura ) ){

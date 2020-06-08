@@ -36,7 +36,7 @@ import ERR from "./Errores"
                             automatico = false, 
                             tiempo = 3000, 
                             select = true 
-                        }
+                        } = {}
     ) => {
         
         if(!validarConfig(efecto, tiempo))

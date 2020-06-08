@@ -98,7 +98,8 @@ class Coleccion {
     }
 
 
-    iniciar({contexto = "SinContexto",colorFondo = "fd-blanco", colorTexto = "c-negro", colorFlechas = "#000"}){
+    iniciar(
+        {contexto = "SinContexto",colorFondo = "fd-blanco", colorTexto = "c-negro", colorFlechas = "#000"} = {}){
 
         var c = {
             contexto: contexto,
