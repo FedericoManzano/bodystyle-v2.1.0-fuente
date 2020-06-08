@@ -16,7 +16,13 @@ La forma más rápida y sencilla de disponer de la librería es a través del CD
 La forma de utilizar estos enlaces es agregandolos dentro de la etiqueta `<head>...</head>` de nuestro documento html.
 
 ### CDN
+
+### bodystyle.min.css
 [https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v2.1.0-fuente/master/dist/css/bodystyle.min.css](https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v2.1.0-fuente/master/dist/css/bodystyle.min.css)
+
+### bodystyle.min.js
+[https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v2.1.0-fuente/master/dist/js/bodystyle.min.js](https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v2.1.0-fuente/master/dist/js/bodystyle.min.js)
+
 
 ```html
 <!DOCTYPE html>
@@ -29,12 +35,59 @@ La forma de utilizar estos enlaces es agregandolos dentro de la etiqueta `<head>
     <link rel="stylesheet" href="https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v2.1.0-fuente/master/dist/css/bodystyle.min.css">
 
 </head>
+
+<!-- Resto de la página -->
+```
+```html
+<script src="https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v2.1.0-fuente/master/dist/js/bodystyle.min.js"></script>
+</body>
+```
+
+## Plantilla 
+
+Dejamos una plantilla para copiar y pegar para poder cargar la librería con lo que mencionamos antes.
+
+```html
+<!DOCTYPE html>
+    <head>
+        <!-- META obligatorio para poder utilizar la libreria -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Link con el CDN de los estilos css  -->
+        <link rel="stylesheet" href="https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v2.1.0-fuente/master/dist/css/bodystyle.min.css">
+    </head>
+    <body>
+        <h1>Hola Mundo !!! <span class="badge badge-rojo">New</h1>
+        <script src="https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v2.1.0-fuente/master/dist/js/bodystyle.min.js"></script>
+    </body>
+</html>
 ```
 
 
 ## Descarga 
 
-Podemos disponer de la librería a través de su código fuente, el archivo pre-compilado, el CDN de los 
-archivos minificados o instalarla como una dependencia de nuestro proyecto con los gestores de paquetes 
+Podemos disponer de la librería a través de su código fuente, el archivo pre-compilado o instalarla como una dependencia de nuestro proyecto con los gestores de paquetes 
 de Node.
 
+### Archivo Precompilado
+
+[bodystyle-v2.1.0-precompilado-master.zip](https://github.com/FedericoManzano/bodystyle-v2.1.0-precompilado/archive/master.zip)
+
+
+### Archivo Fuente
+
+[bodystyle-v2.1.0-fuente-master.zip](https://github.com/FedericoManzano/bodystyle-v2.1.0-fuente/archive/master.zip)
+
+### Node package
+
+#### NPM 
+
+```
+npm i bodystyle
+```
+
+#### Yarn 
+
+```
+yarn add bodystyle
+```
