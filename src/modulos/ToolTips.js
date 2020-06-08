@@ -195,9 +195,9 @@ import $ from 'jquery'
     const inicializar = () => {
 
         /** Efecto hover  */
-        $(".tips-ele").hover(function() {
-            var posicion = $(this).data("posicion");
-            var contenido = $(this).data("tips");
+        $(".tips-ele").hover(function( e ) {
+            var posicion = $(e.target).data("posicion");
+            var contenido = $(e.target).data("tips");
 
             // Validar campos de entrada
             if(!validarTips(posicion, contenido))
