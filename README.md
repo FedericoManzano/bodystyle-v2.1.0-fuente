@@ -1,6 +1,6 @@
 # Bodystyle UI 
 
-## Librería de estilos en CSS (v2.1.0)
+## Librería de estilos en CSS (v2.1.1)
 
 Librería pensada para la creación y el desarrollo del frontend de sitios o aplicaciones web.
 

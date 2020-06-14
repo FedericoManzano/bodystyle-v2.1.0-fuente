@@ -2,6 +2,12 @@ import $ from "jquery"
 import ERR from "./Errores"
 
 class Select {
+
+    destroy(contexto) {
+        $(contexto).off()
+        $(contexto + " .lista ul li").off()
+    }
+
     inicializar(contexto, efecto){
         const MODULO = "Error BodyStyle dice: M20"
       

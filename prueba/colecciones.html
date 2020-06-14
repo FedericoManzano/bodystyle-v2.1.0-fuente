@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/css/bodystyle.css">
+</head>
+
+<body>
+
+    <div class="contenedor mar-2">
+        <div id="l-acordeon">
+            <div class="lista-contenedor l-colapso ">
+                <div class="lista-cabecera">
+                    Cabecera
+                </div>
+            <div class="lista-item" data-target="#1">
+                <a href="#">Elemento1</a>
+            </div>
+            <div class="desplegable " id="1">
+                <p class="fz-14">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi deserunt aperiam maiores nobis quasi repellat debitis sapiente accusamus ut perferendis numquam voluptatibus, harum reprehenderit! Asperiores impedit rem modi debitis excepturi.</p>
+            </div>
+            <div class="lista-item desactivado" data-target="#2">
+                <a href="#">Elemento2</a>
+            </div>
+            <div class="desplegable" id="2">
+            <ul>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Porfolio</a></li>
+                <li><a href="#">Actividades</a></li>
+            </ul>
+            </div>
+            <div class="lista-item" data-target="#3">
+                <a href="#">Elemento3</a>
+            </div>
+            <div class="desplegable" id="3">
+                <p class="fz-14">Esto es texto desplegable número 3</p>
+            </div>
+            <div class="lista-pie">
+                Pie de la lista
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+
+    <script src="../dist/js/bodystyle.js"></script>
+    <script>
+        var col = BS.Colecciones()
+        col.iniciar({contexto: "#l-acordeon", colorFondo: "fd-blanco", colorTexto: "c-negro", colorFlechas: "#000"})
+        col.destroy("#l-acordeon")
+    </script>
+</body>
+
+</html>

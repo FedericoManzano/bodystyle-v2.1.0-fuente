@@ -3,6 +3,13 @@ import $ from 'jquery'
 
 (function(){
 
+
+    const destroy = () => {
+        $(".activar-modal").off()
+        $(".complemento").off()
+    }
+
+
     var estadoInicial = () => {
         $(".modal-fondo").css("opacity", 1)
         $(".modal-fondo").append("<div class='complemento'></div>")
@@ -26,7 +33,9 @@ import $ from 'jquery'
             estadoInicial(conf)
             aparecerModal()
             desaparecerModal()
-        }
+        },
+
+        destroy: () => destroy()
     }
 
     window.Modal = Modal

@@ -191,7 +191,9 @@ import $ from 'jquery'
     } 
 
 
-
+    const destroy = () => {
+        $(".tips-ele").off()
+    }
     const inicializar = () => {
 
         /** Efecto hover  */
@@ -275,7 +277,8 @@ import $ from 'jquery'
     var ToolTips = {
         iniciar: () => {
             inicializar()
-        }
+        },
+        destroy: () => destroy()
     }
 
     window.ToolTips = ToolTips;

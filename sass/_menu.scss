@@ -193,6 +193,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.123);
     z-index: 10000000;
     background-color: white;
+    opacity: 0;
     .lista {
         li {
             a {
@@ -250,7 +251,7 @@
     position: fixed;
     bottom: 0;
     top: 4em;
-    left: -240px;
+    left: 0;
     background-color: white;
     box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.253);
     width: 240px;

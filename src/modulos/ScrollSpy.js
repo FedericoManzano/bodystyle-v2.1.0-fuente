@@ -9,6 +9,12 @@ import ERR from "./Errores"
     var ids = new Array(cantidad)
 
 
+    const destroy = () => {
+        console.log("adsdsadas")
+        $(".lista-scroll ul li").off()
+    }
+
+
     const validarListaScroll = ( 
         modulo, 
         ancho, 
@@ -105,7 +111,13 @@ import ERR from "./Errores"
         seleccionarIndice(1)
     } 
 
-
+    const eventoScroll = (e) => {
+        for(var i = 0; i < cantidad; i++){
+            if($(e.target).scrollTop() >= $("#" + ids[i]).offset().top - 200){
+                seleccionarIndice(i + 1)
+            }
+        }
+    }
 
     var seleccionarIndice = (indice)=> {
         $(".elemento-seleccionado").remove()
@@ -118,13 +130,7 @@ import ERR from "./Errores"
     }
 
     var inicializar = () => {
-        $(window).scroll( function(e){
-            for(var i = 0; i < cantidad; i++){
-                if($(this).scrollTop() >= $("#" + ids[i]).offset().top - 200){
-                    seleccionarIndice(i + 1)
-                }
-            }
-        })
+        $(window).scroll(eventoScroll)
     }
 
     var seleccionar = () => {
@@ -144,7 +150,9 @@ import ERR from "./Errores"
             inicializar()
             seleccionar()
             
-        }
+        },
+
+        destroy: () => destroy()
     }
     window.ScrollSpy = ScrollSpy;
 })()

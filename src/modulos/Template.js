@@ -2,7 +2,10 @@ import $ from 'jquery'
 
 (function(){
 
-
+    var destroy = () => {
+        $(".tem-input input").off()
+        $(".tem-input select").off()
+    }
     var inicializar = () => {
         $(".tem-input select").parent().children("label").css("top", 5)
         $(".tem-input select").parent().children("label").css("font-size", 10)
@@ -41,7 +44,9 @@ import $ from 'jquery'
         iniciar : () => {
             inicializar()
             focus()
-        }
+        },
+
+        destroy: ()=> destroy()
     }
 
     window.Template = Template

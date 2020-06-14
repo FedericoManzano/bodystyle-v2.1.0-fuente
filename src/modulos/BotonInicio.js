@@ -2,6 +2,11 @@ import $ from 'jquery'
 
 (function(){
     var boton = null;
+
+
+    const destroy = () => {
+        $(boton).off()
+    }
     var inicializar = ()=> {
         boton = $("<div class='boton-inicio'></div>")
         $(boton).hide()
@@ -33,7 +38,9 @@ import $ from 'jquery'
             inicializar()
             scroll()
             activar()
-        }
+        },
+
+        destroy: () => destroy()
     }
     window.BotonInicio = BotonInicio
 })()

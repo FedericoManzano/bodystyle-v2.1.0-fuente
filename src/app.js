@@ -1,7 +1,7 @@
 
 
 /*!
- * BodyStyle v2.1.0
+ * BodyStyle v2.1.1
  * Copyright Federico Manzano
  * Licencia MIT
  * Repositorio (https://github.com/FedericoManzano/bodystyle-v2.1.0-fuente)
@@ -34,7 +34,7 @@ import Nav from "./modulos/Nav"
 
 
 
-(function(window){
+(function(){
     Waves.iniciar()
     Range.iniciar()
     Alerta.iniciar()
@@ -44,14 +44,22 @@ import Nav from "./modulos/Nav"
     InputHandler.iniciar()
     
 
+    const TemplateDestroy = () => {
+        Template.destroy()
+    }
+
     const NavInit = () => {
         Nav.iniciar()
+    }
+
+    const NavDestroy = () => {
+        Nav.destroy()
     }
 
 
     var ContenedoresInit = () => Contenedores.iniciar()
 
-    var ColeccionInit = () => {
+    var Colecciones = () => {
         return new Coleccion
     } 
 
@@ -62,16 +70,28 @@ import Nav from "./modulos/Nav"
         BotonFlotante.iniciar(config)
     }
 
-    var ScrollSpyInit = (config) => ScrollSpy.iniciar(config)
+    var BotonFlotanteDestroy = () => {
+        BotonFlotante.destroy()
+    }
 
+    var ScrollSpyInit = (config) => ScrollSpy.iniciar(config)
+    var ScrollSpyDestroy = () => ScrollSpy.destroy()
 
 
     var ModalInit = function(conf){
         Modal.iniciar(conf)
     }
 
+    var ModalDestroy = function(){
+        Modal.destroy()
+    }
+
     var ImagenesInit = ()=> {
         Imagenes.iniciar()
+    }
+
+    var ImagenesDestroy = ()=> {
+        Imagenes.destroy()
     }
 
 
@@ -83,7 +103,7 @@ import Nav from "./modulos/Nav"
         return new Tab
     }
 
-    var ColeccionFlotanteInit = () => {
+    var ColeccionFlot = () => {
         return new ColeccionFlotante
     }
 
@@ -124,41 +144,100 @@ import Nav from "./modulos/Nav"
         DropDown.iniciar(config)
     }
 
+    var DropDownDestroy = (elemento) => {
+        DropDown.destroy(elemento)
+    }
+
     var ToolTipsInit = () => {
         ToolTips.iniciar()
+    }
+
+    var ToolTipsDestroy = () => {
+        ToolTips.destroy()
     }
 
     var SelectInit = () => {
         return new Select
     }
 
+    const BotonInicioDestroy = () => {
+        BotonInicio.destroy()
+    }
+
+
 
    var BS = {
-        ModalInit: (config) => ModalInit(config),
-        DropDownInit: (config) => DropDownInit(config),
         AutoInit: () => AutoInit(),
+
+        // Modales
+        ModalInit: (config) => ModalInit(config),
+        ModalDestroy: () => ModalDestroy(),
+
+
+        // Dropdown
+        DropDownInit: (config) => DropDownInit(config),
+        DropDownDestroy: (elemento) => DropDownDestroy(elemento),
+
+        // Toast
         Toast: (html, clases, tiempo) => Toast.ejecutar(html, clases, tiempo),
+
+        // ScrollSpy
         ScrollSpyInit: (config) => ScrollSpyInit(config),
+        ScrollSpyDestroy: () => ScrollSpyDestroy(),
+
+        // BotonFlotante
         BotonFlotanteInit: (config)=> BotonFlotanteInit(config),
+        BotonFlotanteDestroy: () => BotonFlotanteDestroy(),
+
+        // Imagenes
         ImagenesInit: () => ImagenesInit(),
+        ImagenesDestroy: () => ImagenesDestroy(),
+
+        // Deshabilitado
         Deshabilitar: () => Deshabilitar(),
+
+        // Slider
         SliderInit: (config = {}) => SliderInit(config),
+
+        // Paralax
         ParalaxInit: () => ParalaxInit(),
+
+        // botonInicio
         BotonInicioInit: () => BotonInicioInit(),
+        BotonInicioDestroy: () => BotonInicioDestroy(),
+
+
+        // Tabs
         TabInit: () => TabInit(),
+
+        // Tooltips
         ToolTipsInit: () =>  ToolTipsInit(),
-        DesplegarSidebarFija: () => DesplegarSidebarFija(),
-        ColeccionInit: () => ColeccionInit(),
-        ColeccionFlotanteInit: () => ColeccionFlotanteInit(),
+        ToolTipsDestroy: () => ToolTipsDestroy(),
+
+
+        // Colecciones
+        Colecciones: () => Colecciones(),
+        ColeccionFlot: () => ColeccionFlot(),
+
+        // Efecti Hover Borde
         EfectoHoverBordeInit: () => EfectoHoverBordeInit(),
+
+        // Select 
         SelectInit: () => SelectInit(),
+
+        // Contenedores DEPRECATE
         ContenedoresInit: () => ContenedoresInit(),
-        NavInit: () => NavInit()
+
+        // Navs
+        NavInit: () => NavInit(),
+        NavDestroy: () => NavDestroy(),
+
+        // Template
+        TemplateDestroy: () => TemplateDestroy()
     }
     
     window.BS = BS
-    return BS
-})(window)
+})()
 
 export default BS
 

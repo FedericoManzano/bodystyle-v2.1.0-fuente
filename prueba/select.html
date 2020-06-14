@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+
+        
+    <div class="contenedor mar-2">
+        <div id="default" class="select-mod">
+            <select name="nombres">
+                <option value="0" class="inactivo">Seleccionar un nombre...</option>
+                <option value="1">Carlos</option>
+                <option value="2">Roberto</option>
+                <option value="3">Sebastian</option>
+            </select>
+        </div>
+        
+    </div>
+    
+
+
+    <script src="../dist/js/bodystyle.js"></script>
+
+    <script>
+        var select = BS.SelectInit()
+        select.iniciar("#default")
+        select.destroy("#default")
+    </script>
+</body>
+</html>

@@ -3,6 +3,11 @@ import ERR from "./Errores"
 
 class Tab {
 
+
+    destroy(contexto) {
+        $(contexto + " .tab-borde .op-tab-borde label").off()
+        $(contexto + " .tab .op-tab label").off()
+    }
     /**
      * Inicializa el Tab de tipo solapa
      * @param {ID del contenedor padre de todo el tab} contexto 

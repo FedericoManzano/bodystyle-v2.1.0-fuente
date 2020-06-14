@@ -4,6 +4,11 @@ import ERR from "./Errores"
 (function(){
     var presionado = 0;
 
+
+    const destroy = () => {
+        $(".btn-flotante .boton-menu").off()
+    }
+
     var validarBoton = (colorMenu, alineacion, altura) => {
         const MODULO = "Error BodyStyle dice: M02"
 
@@ -84,7 +89,9 @@ import ERR from "./Errores"
         iniciar: function(config){
             iniciar(config);
             eventoClic();
-        }
+        },
+
+        destroy: () => destroy()
     }
 
     window.BotonFlotante = BotonFlotante;

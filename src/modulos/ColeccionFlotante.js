@@ -3,6 +3,15 @@ import ERR from './Errores'
 
 class ColeccionFlotante {
 
+
+    destroy (contexto) {
+        $(contexto + " .lista-float-der .cerrar").off()
+        $(contexto + " .lista-float-der .abrir").off()
+        $(contexto + " .lista-float-izq .cerrar").off()
+        $(contexto + " .lista-float-izq .abrir").off()
+    }
+
+
     inicializarElemento(c){
 
         $(c.contexto + " .lista-float-der").css("top", c.altura)

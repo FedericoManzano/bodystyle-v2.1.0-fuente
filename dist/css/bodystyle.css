@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * BodyStyle v2.1.0
+ * BodyStyle v2.1.1
  * Copyright Federico Manzano
  * Licencia MIT
  * Repositorio (https://github.com/FedericoManzano/bodystyle-v2.1.0-fuente)
@@ -24447,6 +24447,7 @@ input.btn-cubrir-lg-o {
   border-bottom: 1px solid rgba(0, 0, 0, 0.123);
   z-index: 10000000;
   background-color: white;
+  opacity: 0;
 }
 .nav-colapso .lista li a {
   display: block;
@@ -24492,7 +24493,7 @@ input.btn-cubrir-lg-o {
   position: fixed;
   bottom: 0;
   top: 4em;
-  left: -240px;
+  left: 0;
   background-color: white;
   box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.253);
   width: 240px;
