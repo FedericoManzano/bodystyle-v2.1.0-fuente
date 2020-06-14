@@ -86,12 +86,12 @@ Ingresar por el terminal los siguientes comandos para instalar la dependencia de
 
 #### NPM 
 ```
-npm i bodystyle
+npm i body-ui@2.1.0
 ```
 
 #### Yarn 
 ```
-yarn add bodystyle
+yarn add body-ui@2.1.0
 ```
 
 ## Dependencias
